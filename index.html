@@ -1,155 +1,189 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R.Priyadharshini - Portfolio</title>
     <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #2c3e50;
+        }
 
-/* General Styles */
-body {
-    font-family: 'Poppins', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9; /* Light grayish blue */
-    color: #2c3e50; /* Dark slate gray */
-}
+        /* Header */
+        header {
+            background-color: #3a506b;
+            color: #ffffff;
+            text-align: center;
+            padding: 2.5rem 0;
+            position: relative;
+        }
 
-/* Header */
-header {
-    background-color: #3a506b; /* Soft navy blue */
-    color: #ffffff;
-    text-align: center;
-    padding: 2.5rem 0;
-    position: relative;
-}
+        .header-content h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            font-weight: 600;
+        }
 
-.header-content h1 {
-    font-size: 2.5rem;
-    margin: 0;
-    font-weight: 600;
-}
+        .header-content p {
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
 
-/* Profile Picture */
-.profile-picture {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    object-fit: cover;
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%);
-    border: 3px solid #ff9f68; /* Warm peach */
-}
+        /* Profile Picture */
+        .profile-picture {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            border: 3px solid #ff9f68;
+        }
 
-/* Navigation Bar */
-nav {
-    background-color: #2c3e50; /* Dark slate gray */
-    padding: 0.8rem;
-    text-align: center;
-}
+        /* Navigation Bar */
+        nav {
+            background-color: #2c3e50;
+            padding: 0.8rem;
+            text-align: center;
+        }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
 
-nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-}
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
 
-nav ul li a {
-    text-decoration: none;
-    color: #f4a261; /* Soft gold */
-    font-weight: 600;
-    transition: color 0.3s ease-in-out;
-}
+        nav ul li a {
+            text-decoration: none;
+            color: #f4a261;
+            font-weight: 600;
+            transition: color 0.3s ease-in-out;
+        }
 
-nav ul li a:hover {
-    color: #ff9f68; /* Warm peach */
-}
+        nav ul li a:hover {
+            color: #ff9f68;
+        }
 
-/* Main Content */
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 2rem;
-}
+        /* Sections */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 2rem;
+        }
 
-.section-content {
-    background-color: #ffffff;
-    color: #2c3e50; /* Dark slate gray */
-    padding: 2rem;
-    margin-bottom: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: justify;
-}
+        .section-content {
+            background-color: #ffffff;
+            color: #2c3e50;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
 
-/* Download Button */
-.download-button {
-    background-color: #f4a261; /* Soft gold */
-    color: #2c3e50;
-    padding: 0.6rem 1.3rem;
-    text-decoration: none;
-    border-radius: 25px;
-    display: inline-block;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-}
+        /* Download Button */
+        .download-button {
+            background-color: #f4a261;
+            color: #2c3e50;
+            padding: 0.6rem 1.3rem;
+            text-decoration: none;
+            border-radius: 25px;
+            display: inline-block;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+        }
 
-.download-button:hover {
-    background-color: #ff9f68; /* Warm peach */
-    color: #fff;
-    transform: scale(1.05);
-}
+        .download-button:hover {
+            background-color: #ff9f68;
+            color: #fff;
+            transform: scale(1.05);
+        }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 1.2rem 0;
-    background-color: #2c3e50;
-    color: #f4a261;
-}
+        /* Contact Section */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    .profile-picture {
-        position: relative;
-        display: block;
-        margin: 0 auto 1rem;
-        left: auto;
-        top: auto;
-        transform: none;
-    }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
 
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+        .contact-form button {
+            background-color: #f4a261;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 8px;
+        }
 
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
+        .contact-form button:hover {
+            background-color: #ff9f68;
+        }
 
-    .section-content {
-        padding: 1.5rem;
-    }
-}	    
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1.2rem 0;
+            background-color: #2c3e50;
+            color: #f4a261;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .profile-picture {
+                position: relative;
+                display: block;
+                margin: 0 auto 1rem;
+                left: auto;
+                top: auto;
+                transform: none;
+            }
+
+            nav ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .section-content {
+                padding: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
+
     <header>
         <div class="header-content">
-            <!-- Add your profile picture here -->
             <img src="IMG-20250327-WA0008.jpg" alt="Your Profile Picture" class="profile-picture">
             <h1>R.Priyadharshini</h1>
-            <p>student</p>
+            <p>Computer Applications Student | Web Development Enthusiast</p>
         </div>
     </header>
 
@@ -160,63 +194,52 @@ footer {
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#resume">Resume</a></li>
-           
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <section id="about">
-        <div class="section-content">
-            <h2>About Me</h2>
-            <li>I'm a Computer Application student with a strong interest in Web Development.</li>
-
-        </div>
+    <section id="about" class="container section-content">
+        <h2>About Me</h2>
+        <p>I'm a passionate Computer Application student with a strong interest in Web Development.</p>
     </section>
 
-    <section id="education">
-        <div class="section-content">
-            <h2>Education</h2>
-            <li>Institution: Government Arts College</li>
-            <li>Degree: Bachelor of computer applications(BCA)</li>
-            <li>Year: 2023 - 2026</li>
-        </div>
+    <section id="education" class="container section-content">
+        <h2>Education</h2>
+        <p>Government Arts College, BCA (2023 - 2026)</p>
     </section>
 
-    <section id="skills">
-        <div class="section-content">
-            <h2>Skills</h2>
-            <ul>
-            
-                
-                <li>Python</li>
-                <li>html</li>
-                <li>CSS</li>
-                <li>java</li>
-                <li>c++</li>
-                <li>Java script</li>
-            </ul>
-        </div>
+    <section id="skills" class="container section-content">
+        <h2>Skills</h2>
+        <ul>
+            <li>Python</li>
+            <li>HTML & CSS</li>
+            <li>Java</li>
+            <li>C++</li>
+            <li>JavaScript</li>
+        </ul>
     </section>
 
-    <section id="projects">
-        <div class="section-content">
-            <h2>Projects</h2>
-            <ul>
-                <li><a href="#">E Cart website</a></li>
-                <li><a href="#">College Portal</a></li> 
-                <!-- Add more project links here -->
-            </ul>
-        </div>
+    <section id="projects" class="container section-content">
+        <h2>Projects</h2>
+        <ul>
+            <li><a href="#">E-Cart Website</a></li>
+            <li><a href="#">College Portal</a></li>
+        </ul>
     </section>
 
-    <section id="resume">
-    
-        <div class="section-content">
-            <center>
-            <h2>Resume</h2>
-            <a href="White and Beige Simple Student CV Resume_20250327_155949_0000.png" target="_blank" class="download-button">Download CV</a>
-        </center>
-        </div>
-        
+    <section id="resume" class="container section-content">
+        <h2>Resume</h2>
+        <a href="" target="_blank" class="download-button">Download CV</a>
+    </section>
+
+    <section id="contact" class="container section-content">
+        <h2>Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="R.Priyadharshini" required>
+            <input type="email" placeholder="priyarajendran0903@gmail.com" required>
+            <textarea placeholder="Your Message" rows="4" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
     <footer>
@@ -224,22 +247,14 @@ footer {
     </footer>
 
     <script>
-        // Smooth scrolling to section when clicking on navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                targetElement.scrollIntoView({ behavior: 'smooth' });
             });
         });
     </script>
+
 </body>
 </html>
