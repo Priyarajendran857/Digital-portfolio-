@@ -5,55 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>R.Priyadharshini - Portfolio</title>
     <style>
-        /* General Styles */
-    /* General Styles */
+        /* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+/* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f1f5f9; /* Soft light blue */
-    color: #333;
+    background: #eef2f3; /* Soft neutral background */
+    color: #333; /* Dark text for readability */
+    line-height: 1.6;
 }
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #4e54c8, #8f94fb);
+    background: linear-gradient(135deg, #364f6b, #3fc1c9);
     color: white;
     text-align: center;
-    padding: 4rem 0 2rem;
+    padding: 4rem 0 2.5rem;
     position: relative;
 }
 
 .profile-picture {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #fff;
-    margin-top: -60px;
+    border: 5px solid #fff;
+    margin-top: -70px;
     transition: transform 0.3s ease-in-out;
 }
 
 .profile-picture:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 .header-content h1 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     margin: 10px 0 5px;
     font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .header-content p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: 400;
     opacity: 0.9;
 }
 
 /* Navigation */
 nav {
-    background: #2d3e50;
+    background: #222831;
     padding: 1rem 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
 nav ul {
@@ -65,24 +70,27 @@ nav ul {
 
 nav ul li {
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 18px;
 }
 
 nav ul li a {
-    color: #f8f9fa;
+    color: #eeeeee;
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
-    transition: color 0.3s ease-in-out;
+    padding: 8px 14px;
+    transition: color 0.3s, background 0.3s;
 }
 
 nav ul li a:hover {
-    color: #fbc531;
+    background: #3fc1c9;
+    color: #fff;
+    border-radius: 6px;
 }
 
-/* Section Styling */
+/* Sections */
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
     padding: 2rem;
     text-align: center;
@@ -91,20 +99,21 @@ nav ul li a:hover {
 .section-content {
     background: white;
     padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     margin-bottom: 2rem;
     transition: transform 0.3s ease-in-out;
 }
 
 .section-content:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 }
 
 .section-content h2 {
-    color: #4e54c8;
+    color: #364f6b;
+    font-size: 2.2rem;
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-weight: 700;
 }
 
 /* Skills */
@@ -112,55 +121,58 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
     margin-top: 15px;
 }
 
 .skills-list span {
-    background: #8f94fb;
+    background: #3fc1c9;
     color: white;
-    padding: 10px 18px;
+    padding: 10px 16px;
     border-radius: 20px;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 1rem;
     transition: background 0.3s;
 }
 
 .skills-list span:hover {
-    background: #4e54c8;
+    background: #364f6b;
 }
 
 /* Projects */
 .projects-list a {
     display: block;
-    background: #4e54c8;
+    background: #364f6b;
     color: white;
     padding: 14px;
     margin: 10px 0;
     border-radius: 8px;
     text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease-in-out, transform 0.2s;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .projects-list a:hover {
-    background: #8f94fb;
+    background: #3fc1c9;
     transform: scale(1.05);
 }
 
 /* Resume Download */
 .download-button {
-    background: #fbc531;
-    color: black;
+    background: #f9a826;
+    color: white;
     padding: 12px 24px;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 700;
     text-decoration: none;
     border-radius: 8px;
+    display: inline-block;
     transition: background 0.3s ease-in-out, transform 0.2s;
 }
 
 .download-button:hover {
-    background: #e1b12c;
+    background: #e48d16;
     transform: scale(1.05);
 }
 
@@ -168,42 +180,45 @@ nav ul li a:hover {
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     margin: 12px 0;
     border: 1px solid #ccc;
     border-radius: 8px;
+    font-size: 1rem;
     transition: border 0.3s ease-in-out;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #4e54c8;
+    border-color: #3fc1c9;
     outline: none;
 }
 
 .contact-form button {
-    background: #4e54c8;
+    background: #364f6b;
     color: white;
-    padding: 12px 16px;
+    padding: 12px 18px;
     border: none;
     font-size: 1rem;
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s ease-in-out, transform 0.2s;
+    transition: background 0.3s, transform 0.2s;
     border-radius: 8px;
 }
 
 .contact-form button:hover {
-    background: #8f94fb;
+    background: #3fc1c9;
     transform: scale(1.05);
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 1rem;
-    background: #2d3e50;
+    padding: 1.2rem;
+    background: #222831;
     color: white;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 /* Responsive */
@@ -216,7 +231,25 @@ footer {
 
     nav ul li {
         display: block;
-        margin: 10px 0;
+        margin: 8px 0;
+    }
+
+    .profile-picture {
+        width: 110px;
+        height: 110px;
+    }
+
+    .section-content {
+        padding: 1.5rem;
+    }
+
+    .section-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .skills-list span {
+        font-size: 0.9rem;
+        padding: 8px 14px;
     }
     }
     </style>
